@@ -1,7 +1,3 @@
-Куча (Heap) — это специализированная древовидная структура данных, удовлетворяющая свойству кучи: если B является узлом-потомком узла A, то ключ(A) ≥ ключ(B) для max-heap или ключ(A) ≤ ключ(B) для min-heap. Кучи бывают бинарная, биноминальная, Фибоначчи Бинарная куча на языке Python использует операции heapq, heappop(heap), heapify(x), heapreplace. На языке C++ make_heap, push_heap и pop_heap. На Java java.util.PriorityQueue. Биномиальная куча на языке Python использует операции insert, getMin, extractMin. На языке C++ merge(BinomialHeap& other), decreaseKey. На языке Java meld, deleteMin(), findMin(), delete(HeapItem item). Кучи Фибоначчи на языке Python использует операции insert, minimum, extract_min, merge, decrease_key и delete. На языке C++ insert(key), unite(other_heap), getMin. На языке Java insert, findMin() и extractMin().
+Куча — это деревообразная структура, в которой каждый родитель больше (max-heap) или меньше (min-heap) своих потомков. Бинарные кучи: Python – модуль heapq (heapify, heappop, heapreplace), C++ – алгоритмы make_heap, push_heap, pop_heap, Java – java.util.PriorityQueue. Биномиальные кучи поддерживают insert, getMin и extractMin (Python), merge и decreaseKey (C++), meld, findMin, deleteMin и delete(item) (Java). Кучи Фибоначчи реализуют insert, minimum, extract_min, merge, decrease_key и delete (Python), insert, unite и getMin (C++), insert, findMin и extractMin (Java).
 
-Хеш-таблица — это структура данных, реализующая ассоциативный массив, который отображает ключи в значения с помощью хеш-функции. Как формируются хеши:
-
-1. Хеш-функция преобразует ключ в индекс массива
-2. Разрешение коллизий (методы цепочек, открытая адресация)
-3. Рехэширование при заполнении таблицы
+Хеш-таблица — ассоциативный массив, где хеш-функция переводит ключ в индекс. Коллизии устраняют цепочками или открытой адресацией, а при превышении нагрузки происходит рехэширование.
